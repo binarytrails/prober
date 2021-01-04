@@ -8,15 +8,32 @@ https://docs.microsoft.com/en-us/sysinternals/downloads/accesschk
 
 Flag to accept their EULA otherwise pop-up in GUI. Since we run in CLI, we need it.
 
-## permissions each user level has
+## services permissions
 
     accesschk.exe /accepteula -ucqv *
     accesschk.exe /accepteula -ucqv <service>
-
-## write access to a service with a certain user level
-
     accesschk.exe /accepteula -uwcqv "Authenticated Users" *
+    accesschk.exe /accepteula "power users" c:\windows\system32
+    accesschk.exe /accepteula users -cw *
+    accesschk.exe /accepteula -uwcqv first.last *
+    accesschk.exe /accepteula -ucqv NetLogon
 
-## get permissions per service
+## weak permissions
 
-    accesschk.exe /accepteula -ucqv <service>
+    # folder
+    accesschk.exe /accepteula -uwdqs Users c:\
+    accesschk.exe /accepteula -uwdqs "Authenticated Users" c:\
+    # file
+    accesschk.exe /accepteula -uwqs Users c:\*.*
+    accesschk.exe /accepteula -uwqs "Authenticated Users" c:\*.*
+
+## registery
+
+    accesschk.exe /accepteula -k hklm\software
+    accesschk.exe /accepteula -kns jean\leloup hklm\software
+
+    # explicit integrity level
+    accesschk.exe /accepteula -e -s C:\Users\Administrator
+
+    # global objects that everyone can modify
+    accesschk.exe /accepteula -wuo everyone \basednamedobjects
