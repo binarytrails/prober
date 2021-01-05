@@ -32,8 +32,6 @@ https://github.com/zaproxy/zaproxy
 
 Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2, Extended Security NTLMSSP and Basic HTTP authentication. 
 
-https://github.com/lgandx/Responder
-
 The Browser Exploitation Framework Project 
 
 https://github.com/beefproject/beef
@@ -67,6 +65,10 @@ https://github.com/C0reL0ader/EaST
 Automates elevation of privileges in Linux like systems
 
 https://github.com/guifre/Elevator
+
+PEASS - Privilege Escalation Awesome Scripts SUITE (with colors)
+
+https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
 
 ## reverse engineering
 
@@ -103,6 +105,8 @@ https://github.com/lanjelot/patator
 ### wordlists
 
 https://github.com/xajkep/wordlists
+
+https://github.com/danielmiessler/SecLists
 
 ## windows
 
