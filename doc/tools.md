@@ -20,7 +20,7 @@ https://github.com/salesforce/jarm
 
 ## web
 
-Smuggler - An HTTP Request Smuggling / Desync testing tool written in Python 3 
+Smuggler - An HTTP Request Smuggling / Desync testing tool written in Python 3
 
 https://github.com/defparam/smuggler
 
@@ -28,31 +28,27 @@ Automatically find security vulnerabilities in your web applications while you a
 
 https://github.com/zaproxy/zaproxy
 
-## mitm
+## protocols
 
-Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2, Extended Security NTLMSSP and Basic HTTP authentication. 
+### sql
 
-The Browser Exploitation Framework Project 
+Automatic SQL injection and database takeover tool
 
-https://github.com/beefproject/beef
+https://github.com/sqlmapproject/sqlmap
 
-## process
-
-A GNU/Linux monitoring and profiling tool focused on single processes.
-
-https://github.com/evilsocket/uroboros
-
-## rdp
+### rdp
 
 Scans for accessibility tools backdoors via RDP
 
 https://github.com/linuz/Sticky-Keys-Slayer
 
-## sql
+## mitm
 
-Automatic SQL injection and database takeover tool
+Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2, Extended Security NTLMSSP and Basic HTTP authentication.
 
-https://github.com/sqlmapproject/sqlmap
+The Browser Exploitation Framework Project
+
+https://github.com/beefproject/beef
 
 ## frameworks
 
@@ -109,6 +105,20 @@ https://github.com/xajkep/wordlists
 https://github.com/danielmiessler/SecLists
 
 ## windows
+
+### reconnnaissance
+
+The SNMP protocol is a stateless, datagram oriented protocol. An SNMP scanner is a program that sends SNMP requests to multiple IP addresses, trying different community strings and waiting for a reply. Unfortunately SNMP servers don't respond to requests with invalid community strings.
+
+https://github.com/trailofbits/onesixtyone
+
+### get into the winners party
+
+Python library for Windows Remote Management (WinRM)
+
+https://github.com/diyan/pywinrm
+
+### powershell
 
 PowerSploit - A PowerShell Post-Exploitation Framework
 
