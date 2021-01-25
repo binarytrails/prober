@@ -1,0 +1,6 @@
+[submodule "docs/personal"]
+	path = docs/personal
+	url = https://github.com/binarytrails/notes.git
+[submodule "docs/hacktricks"]
+	path = docs/hacktricks
+	url = https://github.com/carlospolop/hacktricks
