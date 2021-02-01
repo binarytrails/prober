@@ -10,3 +10,6 @@
 [submodule "bin/yaptest"]
 	path = bin/yaptest
 	url = https://github.com/binarytrails/yaptest
+[submodule "wordlists/wordlists"]
+	path = wordlists/wordlists
+	url = https://github.com/xajkep/wordlists
