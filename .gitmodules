@@ -4,3 +4,9 @@
 [submodule "docs/hacktricks"]
 	path = docs/hacktricks
 	url = https://github.com/carlospolop/hacktricks
+[submodule "bin/impacket"]
+	path = bin/impacket
+	url = https://github.com/SecureAuthCorp/impacket
+[submodule "bin/yaptest"]
+	path = bin/yaptest
+	url = https://github.com/binarytrails/yaptest
