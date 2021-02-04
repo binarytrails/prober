@@ -13,3 +13,6 @@
 [submodule "wordlists/wordlists"]
 	path = wordlists/wordlists
 	url = https://github.com/xajkep/wordlists
+[submodule "docs/payloadsallthethings"]
+	path = docs/payloadsallthethings
+	url = https://github.com/swisskyrepo/PayloadsAllTheThings
