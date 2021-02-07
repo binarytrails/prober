@@ -26,6 +26,7 @@ fi
 if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/binarytrails/notes.git docs/personal;
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings docs/payloadsallthethings;
+    git clone https://github.com/GTFOBins/GTFOBins.github.io/ docs/gtfo-bins;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/hacktricks? [average] (y/n)? " AVERAGE;
