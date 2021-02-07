@@ -1,1 +1,1 @@
-grep --color=auto -rni "$@" $(find . -name *.md)
+grep --color=auto -rni --include *.md $@
