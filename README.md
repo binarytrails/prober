@@ -1,15 +1,23 @@
-# pentest
+# prober
 
-> useful things
+    $ ./prober.sh 
 
-## submodules
+     ██▓███   ██▀███   ▒█████   ▄▄▄▄   ▓█████  ██▀███  
+    ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒▓█████▄ ▓█   ▀ ▓██ ▒ ██▒
+    ▓██░ ██▓▒▓██ ░▄█ ▒▒██░  ██▒▒██▒ ▄██▒███   ▓██ ░▄█ ▒
+    ▒██▄█▓▒ ▒▒██▀▀█▄  ▒██   ██░▒██░█▀  ▒▓█  ▄ ▒██▀▀█▄  
+    ▒██▒ ░  ░░██▓ ▒██▒░ ████▓▒░░▓█  ▀█▓░▒████▒░██▓ ▒██▒
+    ▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ░▒▓███▀▒░░ ▒░ ░░ ▒▓ ░▒▓░
+    ░▒ ░       ░▒ ░ ▒░  ░ ▒ ▒░ ▒░▒   ░  ░ ░  ░  ░▒ ░ ▒░
+    ░░         ░░   ░ ░ ░ ░ ▒   ░    ░    ░     ░░   ░ 
+                ░         ░ ░   ░         ░  ░   ░     
 
-    git submodule update --init --recursive
+    - Pentest journey by Vsevolod (Seva) Ivanov <seva@binarytrails.net>
+    
+        By default, gets only [light] & asks confirmation for rest. 
+        Run & control with 'LIGHT=y AVERAGE=y HEAVY=y ./deps.sh'
+
 
 ## license
 
 The code is licensed under a GNU General Public License [GPLv3+](http://www.gnu.org/licenses/gpl.html).
-
-## authors
-
-Vsevolod (Seva) Ivanov <seva@binarytrails.net>
