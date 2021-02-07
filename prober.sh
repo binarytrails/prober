@@ -24,9 +24,10 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone docs? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
-    git clone https://github.com/binarytrails/notes.git docs/personal;
+    git clone https://github.com/binarytrails/notes.git docs/notes;
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings docs/payloadsallthethings;
     git clone https://github.com/GTFOBins/GTFOBins.github.io/ docs/gtfo-bins;
+    echo "go get github.com/tomnomnom/waybackurls" && go get github.com/tomnomnom/waybackurls;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/hacktricks? [average] (y/n)? " AVERAGE;
