@@ -12,7 +12,7 @@ echo """
     - Pentest journey by Vsevolod (Seva) Ivanov <seva@binarytrails.net>
     
         By default, gets only [light] & asks confirmation for rest. 
-        Run & control with 'LIGHT=y AVERAGE=y HEAVY=y ./deps.sh'
+        Run & control with 'AVERAGE=y HEAVY=n ./prober.sh'
 """;
 
 LIGHT="y";
@@ -20,14 +20,14 @@ LIGHT="y";
 #HEAVY="";
 
 # docs
-if [ "$LIGHT" != "y" ]; then
+if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone docs? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/binarytrails/notes.git docs/personal;
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings docs/payloadsallthethings;
 fi
-if [ "$AVERAGE" != "y" ]; then
+if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/hacktricks? [average] (y/n)? " AVERAGE;
 fi
 if [ "$AVERAGE" = "y" ]; then
@@ -35,22 +35,23 @@ if [ "$AVERAGE" = "y" ]; then
 fi
 
 # bin
-if [ "$LIGHT" != "y" ]; then
+if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/SecureAuthCorp/impacket.git bin/impacket;
     git clone https://github.com/binarytrails/yaptest.git bin/yaptest;
+    git clone https://github.com/rezasp/joomscan.git bin/joomscan;
 fi
 
 # lists
-if [ "$LIGHT" != "y" ]; then
+if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone lists? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/xajkep/wordlists lists/wordlists;
 fi
-if [ "$HEAVY" != "y" ]; then
+if [[ "$HEAVY" != "y" && "$HEAVY" != "n" ]]; then
     read -p "Do you want to clone seclists? [heavy] (y/n)? " HEAVY;
 fi
 if [ "$HEAVY" = "y" ]; then
