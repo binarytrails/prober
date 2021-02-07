@@ -15,7 +15,7 @@
     - Pentest journey by Vsevolod (Seva) Ivanov <seva@binarytrails.net>
     
         By default, gets only [light] & asks confirmation for rest. 
-        Run & control with 'LIGHT=y AVERAGE=y HEAVY=y ./deps.sh'
+        Run & control with 'LIGHT=y AVERAGE=y HEAVY=y ./prober.sh'
 
 
 ## license
