@@ -1,1 +1,1 @@
-grep --color=auto -rni --include *.md $@
+grep --color=auto --include *.md -rni $@

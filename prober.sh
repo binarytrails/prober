@@ -27,7 +27,6 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/binarytrails/notes.git docs/notes;
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings docs/payloadsallthethings;
     git clone https://github.com/GTFOBins/GTFOBins.github.io/ docs/gtfo-bins;
-    echo "go get github.com/tomnomnom/waybackurls" && go get github.com/tomnomnom/waybackurls;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/hacktricks? [average] (y/n)? " AVERAGE;
@@ -44,6 +43,8 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/SecureAuthCorp/impacket.git bin/impacket;
     git clone https://github.com/binarytrails/yaptest.git bin/yaptest;
     git clone https://github.com/rezasp/joomscan.git bin/joomscan;
+    echo "go get github.com/tomnomnom/waybackurls" && go get github.com/tomnomnom/waybackurls \
+      ln -s ~/go/bin/waybackurls bin/waybackurls;
 fi
 
 # lists
