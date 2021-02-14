@@ -25,14 +25,21 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
 fi
 if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/binarytrails/notes.git docs/notes;
-    git clone https://github.com/swisskyrepo/PayloadsAllTheThings docs/payloadsallthethings;
-    git clone https://github.com/GTFOBins/GTFOBins.github.io/ docs/gtfo-bins;
+    git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git docs/payloadsallthethings;
+    git clone https://github.com/GTFOBins/GTFOBins.github.io.git docs/gtfo-bins;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/hacktricks? [average] (y/n)? " AVERAGE;
 fi
 if [ "$AVERAGE" = "y" ]; then
     git clone https://github.com/carlospolop/hacktricks.git docs/hacktricks;
+fi
+if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
+    read -p "Do you want to clone docs/ired.team? [average] (y/n)? " AVERAGE;
+fi
+if [ "$AVERAGE" = "y" ]; then
+    git clone https://github.com/mantvydasb/RedTeam-Tactics-and-Techniques.git docs/ired-team;
+      ln -s ./ired-team/offensive-security-experiments/offensive-security-cheetsheets/README.md docs/cheatsheets-ired-team.md;
 fi
 
 # bin
