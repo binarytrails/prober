@@ -39,7 +39,7 @@ if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
 fi
 if [ "$AVERAGE" = "y" ]; then
     git clone https://github.com/mantvydasb/RedTeam-Tactics-and-Techniques.git docs/ired-team;
-      ln -s ./ired-team/offensive-security-experiments/offensive-security-cheetsheets/README.md docs/cheatsheets-ired-team.md;
+      ln -fs ./ired-team/offensive-security-experiments/offensive-security-cheetsheets/README.md docs/cheatsheets-ired-team.md;
 fi
 
 # bin
@@ -47,11 +47,14 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
+    git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite bin/peass;
+        ln -fs peass/linPEAS/linpeas.sh bin/linpeas.sh;
+        ln -fs ../peass/winPEAS/winPEASbat/winPEAS.bat bin/win/winpeas.bat;
     git clone https://github.com/SecureAuthCorp/impacket.git bin/impacket;
     git clone https://github.com/binarytrails/yaptest.git bin/yaptest;
     git clone https://github.com/rezasp/joomscan.git bin/joomscan;
-    echo "go get github.com/tomnomnom/waybackurls" && go get github.com/tomnomnom/waybackurls \
-      ln -s ~/go/bin/waybackurls bin/waybackurls;
+    echo "go get github.com/tomnomnom/waybackurls" && go get github.com/tomnomnom/waybackurls;
+      ln -fs ~/go/bin/waybackurls bin/waybackurls;
 fi
 
 # lists
