@@ -24,6 +24,9 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone docs? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
+    mkdir -p docs/cert;
+    wget https://raw.githubusercontent.com/six2dez/OSCP-Human-Guide/master/oscp_human_guide.md -O docs/cert/oscp_human_guide.md;
+    git clone https://github.com/six2dez/pentest-book docs/pentest-book;
     git clone https://github.com/binarytrails/notes.git docs/notes;
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git docs/payloadsallthethings;
     git clone https://github.com/GTFOBins/GTFOBins.github.io.git docs/gtfo-bins;
@@ -47,6 +50,8 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
+    wget https://raw.githubusercontent.com/21y4d/nmapAutomator/master/nmapAutomator.sh -O bin/nmapAutomator.sh;
+    chmod +x bin/nmapAutomator.sh;
     git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite bin/peass;
         ln -fs peass/linPEAS/linpeas.sh bin/linpeas.sh;
         ln -fs ../peass/winPEAS/winPEASbat/winPEAS.bat bin/win/winpeas.bat;
