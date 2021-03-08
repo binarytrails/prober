@@ -51,7 +51,9 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
 fi
 if [ "$LIGHT" = "y" ]; then
     wget https://raw.githubusercontent.com/21y4d/nmapAutomator/master/nmapAutomator.sh -O bin/nmapAutomator.sh;
-    chmod +x bin/nmapAutomator.sh;
+        chmod +x bin/nmapAutomator.sh;
+    git clone https://github.com/binarytrails/pyrate.git bin/pyrate;
+        cd bin/pyrate && ./install.py && cat run.py; cd ../../; python3 -m pyrate --help;
     git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite bin/peass;
         ln -fs peass/linPEAS/linpeas.sh bin/linpeas.sh;
         ln -fs ../peass/winPEAS/winPEASbat/winPEAS.bat bin/win/winpeas.bat;
