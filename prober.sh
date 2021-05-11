@@ -10,9 +10,11 @@ echo """
             ░         ░ ░   ░         ░  ░   ░     
 
     - Pentest journey by Vsevolod (Seva) Ivanov <seva@binarytrails.net>
-    
-        By default, gets only [light] & asks confirmation for rest. 
+
+        By default, gets only [light] & asks confirmation for rest.
         Run & control with 'AVERAGE=y HEAVY=n ./prober.sh'
+
+        Project source: https://github.com/binarytrails/prober
 """;
 
 LIGHT="y";
@@ -24,8 +26,7 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone docs? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
-    mkdir -p docs/cert;
-    wget https://raw.githubusercontent.com/six2dez/OSCP-Human-Guide/master/oscp_human_guide.md -O docs/cert/oscp_human_guide.md;
+    wget https://raw.githubusercontent.com/six2dez/OSCP-Human-Guide/master/oscp_human_guide.md -O docs/everything-1.md;
     git clone https://github.com/six2dez/pentest-book docs/pentest-book;
     git clone https://github.com/binarytrails/notes.git docs/notes;
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git docs/payloadsallthethings;
