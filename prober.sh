@@ -51,8 +51,10 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
-    wget https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py -O bin/linuxprivchecker.py;
-        chmod +x bin/linuxprivchecker.py;
+    wget https://raw.githubusercontent.com/reider-roque/linpostexp/master/linprivchecker.py -o bin/linprivchecker.py;
+        chmod +x bin/linprivchecker.py;
+    wget https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py -O bin/linprivchecker3.py;
+        chmod +x bin/linprivchecker3.py;
     wget https://raw.githubusercontent.com/21y4d/nmapAutomator/master/nmapAutomator.sh -O bin/nmapAutomator.sh;
         chmod +x bin/nmapAutomator.sh;
     git clone https://github.com/binarytrails/pyrate.git bin/pyrate;
