@@ -51,6 +51,8 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
+    git clone https://github.com/binarytrails/nmap-parse-output bin/nmap-parse-output;
+        ln -fs nmap-parse-output/nmap-parse-output bin/nmap-parse;
     wget https://raw.githubusercontent.com/reider-roque/linpostexp/master/linprivchecker.py -o bin/linprivchecker.py;
         chmod +x bin/linprivchecker.py;
     wget https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py -O bin/linprivchecker3.py;

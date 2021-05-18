@@ -59,6 +59,7 @@ if ($LIGHT -ne "y" -And $LIGHT -ne "n"){
     $LIGHT = Read-Host 'What is your username?'
 }
 if ($LIGHT -eq "y"){
+    mkdir docs;
     wget https://raw.githubusercontent.com/six2dez/OSCP-Human-Guide/master/oscp_human_guide.md -O docs/everything-1.md;
     git clone https://github.com/six2dez/pentest-book docs/pentest-book;
     git clone https://github.com/binarytrails/notes.git docs/notes;
