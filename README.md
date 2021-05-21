@@ -17,6 +17,7 @@
     Example: 'AVERAGE=y HEAVY=n ./prober.sh'
     Project source: https://github.com/binarytrails/prober
 
+*No more pain of managing git submodules, just clean and simple wget and git clones.*
 
 ## authors
 
