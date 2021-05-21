@@ -9,11 +9,14 @@ echo """
 ░░         ░░   ░ ░ ░ ░ ▒   ░    ░    ░     ░░   ░ 
             ░         ░ ░   ░         ░  ░   ░     
 
-    - Pentest journey by Vsevolod (Seva) Ivanov <seva@binarytrails.net>
+    Pentest framework build around GitHub by binarytrails
 
-        Example: '$AVERAGE="y"; $HEAVY=""; ./prober-win.ps1'
+    WARNING: Linux prober.sh is complete whereas this Windows Powershell script is in Alpha stage.
+    WARNING: Linux prober.sh is complete whereas this Windows Powershell script is in Alpha stage.
+    WARNING: Linux prober.sh is complete whereas this Windows Powershell script is in Alpha stage.
 
-        Project source: https://github.com/binarytrails/prober
+    Example: '$AVERAGE="y"; $HEAVY=""; ./prober-win.ps1'
+    Project source: https://github.com/binarytrails/prober
 
 """;
 

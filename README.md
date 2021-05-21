@@ -12,11 +12,15 @@
     ░░         ░░   ░ ░ ░ ░ ▒   ░    ░    ░     ░░   ░ 
                 ░         ░ ░   ░         ░  ░   ░     
 
-    - Pentest journey by Vsevolod (Seva) Ivanov <seva@binarytrails.net>
-    
-        By default, gets only [light] & asks confirmation for rest. 
-        Run & control with 'LIGHT=y AVERAGE=y HEAVY=y ./prober.sh'
+    Pentest framework build around GitHub by binarytrails
 
+    Example: 'AVERAGE=y HEAVY=n ./prober.sh'
+    Project source: https://github.com/binarytrails/prober
+
+
+## authors
+
+- vsevolod ivanov <seva@binarytrails.net>
 
 ## license
 

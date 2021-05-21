@@ -9,12 +9,10 @@ echo """
 ░░         ░░   ░ ░ ░ ░ ▒   ░    ░    ░     ░░   ░ 
             ░         ░ ░   ░         ░  ░   ░     
 
-    - Pentest journey by Vsevolod (Seva) Ivanov <seva@binarytrails.net>
+    Pentest framework build around GitHub by binarytrails
 
-        By default, gets only [light] & asks confirmation for rest.
-        Run & control with 'AVERAGE=y HEAVY=n ./prober.sh'
-
-        Project source: https://github.com/binarytrails/prober
+    Example: 'AVERAGE=y HEAVY=n ./prober.sh'
+    Project source: https://github.com/binarytrails/prober
 """;
 
 LIGHT="y";
