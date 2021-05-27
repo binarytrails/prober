@@ -25,10 +25,15 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
 fi
 if [ "$LIGHT" = "y" ]; then
     wget https://raw.githubusercontent.com/six2dez/OSCP-Human-Guide/master/oscp_human_guide.md -O docs/everything-1.md;
-    git clone https://github.com/six2dez/pentest-book docs/pentest-book;
     git clone https://github.com/binarytrails/notes.git docs/notes;
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git docs/payloadsallthethings;
     git clone https://github.com/GTFOBins/GTFOBins.github.io.git docs/gtfo-bins;
+fi
+if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
+    read -p "Do you want to clone docs/pentest-book? [average] (y/n)? " AVERAGE;
+fi
+if [ "$AVERAGE" = "y" ]; then
+    git clone https://github.com/six2dez/pentest-book docs/pentest-book;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/hacktricks? [average] (y/n)? " AVERAGE;
@@ -53,6 +58,7 @@ if [ "$LIGHT" = "y" ]; then
     wget https://raw.githubusercontent.com/dolevf/nmap-graphql-introspection-nse/master/graphql-introspection.nse -O bin/nse/graphql-introspection.nse;
     git clone https://github.com/binarytrails/nmap-parse-output bin/nmap-parse-output;
         ln -fs nmap-parse-output/nmap-parse-output bin/nmap-parse;
+    wget https://raw.githubusercontent.com/Anon-Exploiter/SUID3NUM/master/suid3num.py -O bin/suid3num.py;
     wget https://raw.githubusercontent.com/reider-roque/linpostexp/master/linprivchecker.py -O bin/linprivchecker.py;
         chmod +x bin/linprivchecker.py;
     wget https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py -O bin/linprivchecker3.py;
