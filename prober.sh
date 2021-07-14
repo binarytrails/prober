@@ -19,6 +19,21 @@ LIGHT="y";
 #AVERAGE="";
 #HEAVY="";
 
+# src
+mkdir -p src/extra;
+if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
+    read -p "Do you want to clone sploit sources? [light] (y/n)? " LIGHT;
+fi
+if [ "$LIGHT" = "y" ]; then
+    git clone https://github.com/qazbnm456/awesome-cve-poc src/extra/cve-poc;
+fi
+if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
+    read -p "Do you want to clone more sploit sources? [average] (y/n)? " AVERAGE;
+fi
+if [ "$AVERAGE" = "y" ]; then
+    git clone https://github.com/zhzyker/exphub src/extra/exphub;
+fi
+
 # docs
 if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone docs? [light] (y/n)? " LIGHT;
@@ -28,6 +43,7 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/binarytrails/notes.git docs/notes;
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git docs/payloadsallthethings;
     git clone https://github.com/GTFOBins/GTFOBins.github.io.git docs/gtfo-bins;
+    wget https://raw.githubusercontent.com/snoopysecurity/awesome-burp-extensions/master/README.md -O docs/burp-extensions.md;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/pentest-book? [average] (y/n)? " AVERAGE;
@@ -75,6 +91,7 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/rezasp/joomscan.git bin/joomscan;
     echo "go get github.com/tomnomnom/waybackurls" && go get github.com/tomnomnom/waybackurls;
       ln -fs ~/go/bin/waybackurls bin/waybackurls;
+    git clone https://github.com/maldevel/EmailHarvester bin/email-harvester;
 fi
 
 # lists
