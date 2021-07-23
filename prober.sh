@@ -19,6 +19,9 @@ LIGHT="y";
 #AVERAGE="";
 #HEAVY="";
 
+# temp
+mkdir ./temp
+
 # src
 mkdir -p src/extra;
 if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
@@ -44,6 +47,7 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git docs/payloadsallthethings;
     git clone https://github.com/GTFOBins/GTFOBins.github.io.git docs/gtfo-bins;
     wget https://raw.githubusercontent.com/snoopysecurity/awesome-burp-extensions/master/README.md -O docs/burp-extensions.md;
+    wget https://gist.github.com/w00tc/486825a0b7c593789b1952878dd86ff5/archive/09ba2049b7d9737096cef161d5c5ddb22fe569dd.zip -O temp/w00tc-notes.zip && mkdir -p docs/w00tc && unzip -j ./temp/w00tc-notes.zip "486825a0b7c593789b1952878dd86ff5-09ba2049b7d9737096cef161d5c5ddb22fe569dd/*" -d docs/w00tc/; rm -rf ./temp/w00tc*;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/pentest-book? [average] (y/n)? " AVERAGE;
