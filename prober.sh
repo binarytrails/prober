@@ -16,25 +16,25 @@ echo """
 """;
 
 LIGHT="y";
-#AVERAGE="";
+AVERAGE="y";
 #HEAVY="";
 
 # temp
 mkdir ./temp
 
-# src
-mkdir -p src/extra;
+# [ex]ploits
+mkdir -p sploits/extra;
 if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone sploit sources? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
-    git clone https://github.com/qazbnm456/awesome-cve-poc src/extra/cve-poc;
+    git clone https://github.com/qazbnm456/awesome-cve-poc sploits/extra/cve-poc;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone more sploit sources? [average] (y/n)? " AVERAGE;
 fi
 if [ "$AVERAGE" = "y" ]; then
-    git clone https://github.com/zhzyker/exphub src/extra/exphub;
+    git clone https://github.com/zhzyker/exphub sploits/extra/exphub;
 fi
 
 # docs
