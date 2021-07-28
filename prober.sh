@@ -54,6 +54,7 @@ if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
 fi
 if [ "$AVERAGE" = "y" ]; then
     git clone https://github.com/six2dez/pentest-book docs/pentest-book;
+    git clone https://github.com/gnebbia/nmap_tutorial docs/nmap;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/hacktricks? [average] (y/n)? " AVERAGE;
@@ -74,6 +75,7 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
+    wget https://raw.githubusercontent.com/eblazquez/fakelib.sh/master/fakelib.sh -O bin/fakelib.sh;
     mkdir -p bin/nse;
     wget https://raw.githubusercontent.com/dolevf/nmap-graphql-introspection-nse/master/graphql-introspection.nse -O bin/nse/graphql-introspection.nse;
     git clone https://github.com/binarytrails/nmap-parse-output bin/nmap-parse-output;
