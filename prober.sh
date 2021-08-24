@@ -110,11 +110,13 @@ fi
 
 
 # lists
+mkdir -p lists/wordlists;
 if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone lists? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
-    git clone https://github.com/xajkep/wordlists lists/wordlists;
+    wget https://github.com/w0lf-d3n/Quebec_Wordlist/raw/main/quebec.txt -O lists/wordlists/quebec.txt;
+    git clone https://github.com/xajkep/wordlists lists/wordlists/xajkep;
 fi
 if [[ "$HEAVY" != "y" && "$HEAVY" != "n" ]]; then
     read -p "Do you want to clone seclists? [heavy] (y/n)? " HEAVY;
