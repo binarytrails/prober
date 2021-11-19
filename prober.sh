@@ -108,7 +108,12 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/maldevel/EmailHarvester bin/email-harvester;
     git clone https://github.com/0xn0ne/weblogicScanner bin/weblogic-scanner;
 fi
-
+if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
+    read -p "Do you want to clone bin/csharp/bc-empire? [average] (y/n)? " AVERAGE;
+fi
+if [ "$AVERAGE" = "y" ]; then
+    mkdir -p bin/win/pwsh && mkdir -p tmp && cd tmp && git clone https://github.com/BC-SECURITY/Empire && mv Empire/empire/server/data/module_source ../bin/win/pwsh/bc-empire && cd ../ && rm -rf ./tmp
+fi
 
 # lists
 mkdir -p lists/wordlists;
