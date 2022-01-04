@@ -1,4 +1,4 @@
-#!/usr/env python3
+#!/usr/bin/python3
 import http.server
 import socketserver
 import io
