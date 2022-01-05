@@ -107,6 +107,7 @@ if [ "$LIGHT" = "y" ]; then
       ln -fs ~/go/bin/waybackurls bin/waybackurls;
     git clone https://github.com/maldevel/EmailHarvester bin/email-harvester;
     git clone https://github.com/0xn0ne/weblogicScanner bin/weblogic-scanner;
+    mkdir -p bin/win/pwsh && git clone https://github.com/samratashok/nishang bin/win/pwsh/nishang;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone bin/csharp/bc-empire? [average] (y/n)? " AVERAGE;
