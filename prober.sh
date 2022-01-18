@@ -79,6 +79,16 @@ if [ "$AVERAGE" = "y" ]; then
 fi
 
 # bin
+# extra things using package managers
+read -p "Do you want to install python3 bin tools? (y/n)? " PIP3_TOOLS;
+if [[ "$PIP3_TOOLS" == "y" ]]; then
+    pip3 install -r install/extra.pip
+fi
+read -p "Do you want to install SIP tools with apt manager? (y/n)? " SIP_TOOLS;
+if [[ "$SIP_TOOLS" == "y" ]]; then
+    ./install/sippts.apt
+fi
+# good ol' way
 if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
