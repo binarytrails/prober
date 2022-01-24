@@ -56,6 +56,7 @@ if [ "$LIGHT" = "y" ]; then
     wget https://gist.github.com/w00tc/486825a0b7c593789b1952878dd86ff5/archive/09ba2049b7d9737096cef161d5c5ddb22fe569dd.zip -O temp/w00tc-notes.zip && mkdir -p docs/w00tc && unzip -j ./temp/w00tc-notes.zip "486825a0b7c593789b1952878dd86ff5-09ba2049b7d9737096cef161d5c5ddb22fe569dd/*" -d docs/w00tc/; rm -rf ./temp/w00tc*;
     git clone https://github.com/LOLBAS-Project/LOLBAS docs/living-off-the-land;
     wget https://raw.githubusercontent.com/S3cur3Th1sSh1t/Pentest-Tools/master/README.md -O docs/pentest-tools.md;
+    git clone https://github.com/ihebski/A-Red-Teamer-diaries docs/red-team-diaries;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/pentest-book? [average] (y/n)? " AVERAGE;
@@ -118,6 +119,8 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/maldevel/EmailHarvester bin/email-harvester;
     git clone https://github.com/0xn0ne/weblogicScanner bin/weblogic-scanner;
     mkdir -p bin/win/pwsh && git clone https://github.com/samratashok/nishang bin/win/pwsh/nishang;
+    git clone https://github.com/bcoles/jira_scan bin/jira-scan;
+    git clone https://github.com/ihebski/DefaultCreds-cheat-sheet bin/default-creds/;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone bin/csharp/bc-empire? [average] (y/n)? " AVERAGE;
