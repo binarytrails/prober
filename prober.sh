@@ -120,6 +120,7 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/0xn0ne/weblogicScanner bin/weblogic-scanner;
     mkdir -p bin/win/pwsh && git clone https://github.com/samratashok/nishang bin/win/pwsh/nishang;
     git clone https://github.com/bcoles/jira_scan bin/jira-scan;
+    git clone https://github.com/MayankPandey01/Jira-Lens bin/jira-lens-scan;
     git clone https://github.com/ihebski/DefaultCreds-cheat-sheet bin/default-creds/;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
