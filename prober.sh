@@ -122,6 +122,9 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/bcoles/jira_scan bin/jira-scan;
     git clone https://github.com/MayankPandey01/Jira-Lens bin/jira-lens-scan;
     git clone https://github.com/ihebski/DefaultCreds-cheat-sheet bin/default-creds/;
+    wget https://raw.githubusercontent.com/extremecoders-re/pyinstxtractor/master/pyinstxtractor.py -O bin/pyinstxtractor.py;
+    git clone https://github.com/zrax/pycdc bin/pycdc;
+    echo "cmake CMakeLists.txt && make" > bin/pycdc/build.sh;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone bin/csharp/bc-empire? [average] (y/n)? " AVERAGE;
