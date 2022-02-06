@@ -94,38 +94,38 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
-    mkdir -p bin/{nmap,http,ftp};
-    wget https://raw.githubusercontent.com/eblazquez/fakelib.sh/master/fakelib.sh -O bin/fakelib.sh && chmod +x bin/fakelib.sh;
+    mkdir -p bin/{nmap,http,ftp,linux,python,extra};
+    wget https://raw.githubusercontent.com/eblazquez/fakelib.sh/master/fakelib.sh -O bin/linux/fakelib.sh && chmod +x bin/linux/fakelib.sh;
     mkdir -p bin/nmap/nse;
     wget https://raw.githubusercontent.com/dolevf/nmap-graphql-introspection-nse/master/graphql-introspection.nse -O bin/nmap/nse/graphql-introspection.nse;
     git clone https://github.com/binarytrails/nmap-parse-output bin/nmap/nmap-parse-output;
         ln -fs nmap-parse-output/nmap-parse-output bin/nmap/nmap-parse;
-    wget https://raw.githubusercontent.com/Anon-Exploiter/SUID3NUM/master/suid3num.py -O bin/suid3num.py;
-    wget https://raw.githubusercontent.com/reider-roque/linpostexp/master/linprivchecker.py -O bin/linprivchecker.py;
+    wget https://raw.githubusercontent.com/Anon-Exploiter/SUID3NUM/master/suid3num.py -O bin/linux/suid3num.py;
+    wget https://raw.githubusercontent.com/reider-roque/linpostexp/master/linprivchecker.py -O bin/linux/linprivchecker.py;
         chmod +x bin/linprivchecker.py;
-    wget https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py -O bin/linprivchecker3.py;
+    wget https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py -O bin/linux/linprivchecker3.py;
         chmod +x bin/linprivchecker3.py;
     wget https://raw.githubusercontent.com/21y4d/nmapAutomator/master/nmapAutomator.sh -O bin/nmap/nmapAutomator.sh;
         chmod +x bin/nmap/nmapAutomator.sh;
-    git clone https://github.com/binarytrails/pyrate.git bin/pyrate;
-        cd bin/pyrate && ./install.py && cat run.py; cd ../../; python3 -m pyrate --help;
+    git clone https://github.com/binarytrails/pyrate.git bin/c2/pyrate;
+        cd bin/c2/pyrate && ./install.py && cat run.py; cd ../../../; python3 -m pyrate --help;
     git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite bin/peass;
-        ln -fs peass/linPEAS/linpeas.sh bin/linpeas.sh;
+        ln -fs peass/linPEAS/linpeas.sh bin/linux/linpeas.sh;
         ln -fs ../peass/winPEAS/winPEASbat/winPEAS.bat bin/win/winpeas.bat;
     git clone https://github.com/SecureAuthCorp/impacket.git bin/impacket;
-    git clone https://github.com/binarytrails/yaptest.git bin/yaptest;
-    git clone https://github.com/rezasp/joomscan.git bin/joomscan;
+    git clone https://github.com/binarytrails/framework/yaptest.git bin/extra/yaptest;
+    git clone https://github.com/rezasp/joomscan.git bin/http/joomscan;
     echo "go get github.com/tomnomnom/waybackurls" && go get github.com/tomnomnom/waybackurls;
-      ln -fs ~/go/bin/waybackurls bin/waybackurls;
-    git clone https://github.com/maldevel/EmailHarvester bin/email-harvester;
-    git clone https://github.com/0xn0ne/weblogicScanner bin/weblogic-scanner;
+      ln -fs ~/go/bin/http/waybackurls bin/http/waybackurls;
+    git clone https://github.com/maldevel/EmailHarvester bin/osint/email-harvester;
+    git clone https://github.com/0xn0ne/weblogicScanner bin/http/weblogic-scanner;
     mkdir -p bin/win/pwsh && git clone https://github.com/samratashok/nishang bin/win/pwsh/nishang;
     git clone https://github.com/bcoles/jira_scan bin/jira-scan;
     git clone https://github.com/MayankPandey01/Jira-Lens bin/jira-lens-scan;
     git clone https://github.com/ihebski/DefaultCreds-cheat-sheet bin/default-creds/;
     wget https://raw.githubusercontent.com/extremecoders-re/pyinstxtractor/master/pyinstxtractor.py -O bin/pyinstxtractor.py;
-    git clone https://github.com/zrax/pycdc bin/pycdc;
-    echo "cmake CMakeLists.txt && make" > bin/pycdc/build.sh;
+    git clone https://github.com/zrax/pycdc bin/python/pycdc;
+    echo "cmake CMakeLists.txt && make" > bin/python/pycdc/build.sh;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone bin/csharp/bc-empire? [average] (y/n)? " AVERAGE;
