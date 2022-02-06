@@ -95,17 +95,17 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
 fi
 if [ "$LIGHT" = "y" ]; then
     wget https://raw.githubusercontent.com/eblazquez/fakelib.sh/master/fakelib.sh -O bin/fakelib.sh && chmod +x bin/fakelib.sh;
-    mkdir -p bin/nse;
-    wget https://raw.githubusercontent.com/dolevf/nmap-graphql-introspection-nse/master/graphql-introspection.nse -O bin/nse/graphql-introspection.nse;
-    git clone https://github.com/binarytrails/nmap-parse-output bin/nmap-parse-output;
-        ln -fs nmap-parse-output/nmap-parse-output bin/nmap-parse;
+    mkdir -p bin/nmap/nse;
+    wget https://raw.githubusercontent.com/dolevf/nmap-graphql-introspection-nse/master/graphql-introspection.nse -O bin/nmap/nse/graphql-introspection.nse;
+    git clone https://github.com/binarytrails/nmap-parse-output bin/nmap/nmap-parse-output;
+        ln -fs nmap-parse-output/nmap-parse-output bin/nmap/nmap-parse;
     wget https://raw.githubusercontent.com/Anon-Exploiter/SUID3NUM/master/suid3num.py -O bin/suid3num.py;
     wget https://raw.githubusercontent.com/reider-roque/linpostexp/master/linprivchecker.py -O bin/linprivchecker.py;
         chmod +x bin/linprivchecker.py;
     wget https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py -O bin/linprivchecker3.py;
         chmod +x bin/linprivchecker3.py;
-    wget https://raw.githubusercontent.com/21y4d/nmapAutomator/master/nmapAutomator.sh -O bin/nmapAutomator.sh;
-        chmod +x bin/nmapAutomator.sh;
+    wget https://raw.githubusercontent.com/21y4d/nmapAutomator/master/nmapAutomator.sh -O bin/nmap/nmapAutomator.sh;
+        chmod +x bin/nmap/nmapAutomator.sh;
     git clone https://github.com/binarytrails/pyrate.git bin/pyrate;
         cd bin/pyrate && ./install.py && cat run.py; cd ../../; python3 -m pyrate --help;
     git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite bin/peass;
