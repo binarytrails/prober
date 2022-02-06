@@ -94,6 +94,7 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
+    mkdir -p bin/{nmap,http,ftp};
     wget https://raw.githubusercontent.com/eblazquez/fakelib.sh/master/fakelib.sh -O bin/fakelib.sh && chmod +x bin/fakelib.sh;
     mkdir -p bin/nmap/nse;
     wget https://raw.githubusercontent.com/dolevf/nmap-graphql-introspection-nse/master/graphql-introspection.nse -O bin/nmap/nse/graphql-introspection.nse;
