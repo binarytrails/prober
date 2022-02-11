@@ -18,6 +18,7 @@ echo """
 LIGHT="y";
 AVERAGE="y";
 #HEAVY="";
+#GIGANTIC=""
 
 # temp
 mkdir -p ./temp
@@ -94,7 +95,7 @@ if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone bin? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
-    mkdir -p bin/{nmap,http,ftp,linux,python,extra};
+    mkdir -p bin/{nmap,http,ftp,linux,python,hashcat,extra};
     wget https://raw.githubusercontent.com/eblazquez/fakelib.sh/master/fakelib.sh -O bin/linux/fakelib.sh && chmod +x bin/linux/fakelib.sh;
     mkdir -p bin/nmap/nse;
     wget https://raw.githubusercontent.com/dolevf/nmap-graphql-introspection-nse/master/graphql-introspection.nse -O bin/nmap/nse/graphql-introspection.nse;
@@ -126,6 +127,9 @@ if [ "$LIGHT" = "y" ]; then
     wget https://raw.githubusercontent.com/extremecoders-re/pyinstxtractor/master/pyinstxtractor.py -O bin/pyinstxtractor.py;
     git clone https://github.com/zrax/pycdc bin/python/pycdc;
     echo "cmake CMakeLists.txt && make" > bin/python/pycdc/build.sh;
+    mkdir -p bin/hashcat/rules/;
+    wget https://raw.githubusercontent.com/hashcat/hashcat/master/rules/best64.rule -O bin/hashcat/rules/best64.rule;
+    wget https://github.com/NotSoSecure/password_cracking_rules/raw/master/OneRuleToRuleThemAll.rule -O bin/hashcat/rules/OneRuleToRuleThemAll.rule;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone bin/csharp/bc-empire? [average] (y/n)? " AVERAGE;
@@ -135,13 +139,14 @@ if [ "$AVERAGE" = "y" ]; then
 fi
 
 # lists
-mkdir -p lists/wordlists;
+mkdir -p lists;
 if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone lists? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
-    wget https://github.com/w0lf-d3n/Quebec_Wordlist/raw/main/quebec.txt -O lists/wordlists/quebec.txt;
-    git clone https://github.com/xajkep/wordlists lists/wordlists/xajkep;
+    wget https://github.com/w0lf-d3n/Quebec_Wordlist/raw/main/quebec.txt -O lists/quebec-passwords.txt;
+    git clone https://github.com/xajkep/wordlists lists/xajkep;
+    git clone https://github.com/Freeguy1/Wordlistss lists/freeguy1;
 fi
 if [[ "$HEAVY" != "y" && "$HEAVY" != "n" ]]; then
     read -p "Do you want to clone seclists? [heavy] (y/n)? " HEAVY;
@@ -150,4 +155,11 @@ if [ "$HEAVY" = "y" ]; then
     wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \
       && unzip SecList.zip -d lists/seclists \
       && rm -f SecList.zip;
+fi
+if [[ "$GIGANTIC" != "y" && "$GIGANTIC" != "n" ]]; then
+    read -p "Do you want to clone crackstation list? [gigantic] (y/n)? " GIGANTIC;
+fi
+if [ "$GIGANTIC" = "y" ]; then
+    wget -c https://crackstation.net/files/crackstation.txt.gz -O lists/crackstation.txt.gz;
+    echo "To expand 5G into 15G do: gunzip lists/crackstations.txt.gz";
 fi
