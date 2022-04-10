@@ -131,6 +131,7 @@ if [ "$LIGHT" = "y" ]; then
     mkdir -p bin/hashcat/rules/;
     wget https://raw.githubusercontent.com/hashcat/hashcat/master/rules/best64.rule -O bin/hashcat/rules/best64.rule;
     wget https://github.com/NotSoSecure/password_cracking_rules/raw/master/OneRuleToRuleThemAll.rule -O bin/hashcat/rules/OneRuleToRuleThemAll.rule;
+    install/./evil-winrm.sh;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone bin/csharp/bc-empire? [average] (y/n)? " AVERAGE;
