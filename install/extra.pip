@@ -2,3 +2,5 @@ wfuzz
 cve-bin-tool
 ssh-audit
 pwncat-cs
+updog
+itsdangerous==2.0.1
