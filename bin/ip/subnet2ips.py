@@ -4,4 +4,5 @@
 import sys, ipaddress
 subnet = sys.argv[1]
 ips = [str(ip) for ip in ipaddress.IPv4Network(subnet, strict=False)]
-print(ips)
+for ip in ips:
+    print(ip)
