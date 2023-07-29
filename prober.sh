@@ -149,6 +149,7 @@ if [ "$LIGHT" = "y" ]; then
     wget https://github.com/w0lf-d3n/Quebec_Wordlist/raw/main/quebec.txt -O lists/quebec-passwords.txt;
     git clone https://github.com/xajkep/wordlists lists/xajkep;
     git clone https://github.com/Freeguy1/Wordlistss lists/freeguy1;
+    git clone https://github.com/Proviesec/google-dorks lists/google-dorks;
 fi
 if [[ "$HEAVY" != "y" && "$HEAVY" != "n" ]]; then
     read -p "Do you want to clone seclists? [heavy] (y/n)? " HEAVY;
