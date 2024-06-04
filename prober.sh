@@ -25,12 +25,14 @@ mkdir -p ./temp
 
 # [ex]ploits
 mkdir -p sploits/extra;
+mkdir -p sploits/vba
 if [[ "$LIGHT" != "y" && "$LIGHT" != "n" ]]; then
     read -p "Do you want to clone sploit sources? [light] (y/n)? " LIGHT;
 fi
 if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/qazbnm456/awesome-cve-poc sploits/extra/qazbnm456;
     git clone https://github.com/NHPT/CVE-Exploit-Script sploits/extra/nhpt;
+    git clone https://github.com/itm4n/VBA-RunPE sploits/vba/runpe;
 fi
 #if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
 #    read -p "Do you want to clone more sploit sources? [average] (y/n)? " AVERAGE;
@@ -58,6 +60,7 @@ if [ "$LIGHT" = "y" ]; then
     git clone https://github.com/LOLBAS-Project/LOLBAS docs/living-off-the-land;
     wget https://raw.githubusercontent.com/S3cur3Th1sSh1t/Pentest-Tools/master/README.md -O docs/pentest-tools.md;
     git clone https://github.com/ihebski/A-Red-Teamer-diaries docs/red-team-diaries;
+    wget https://raw.githubusercontent.com/frizb/Hydra-Cheatsheet/master/README.md -O docs/hydra.md;
 fi
 if [[ "$AVERAGE" != "y" && "$AVERAGE" != "n" ]]; then
     read -p "Do you want to clone docs/pentest-book? [average] (y/n)? " AVERAGE;
