@@ -99,7 +99,7 @@ xor "shady strings" "encrypt" "7" | Out-file "mitre\defense-evasion\T1140_$now.t
 
 ### T1027 Uses Base64 to obfuscate commands and the payload.
 $now=getNow
-[Convert]::ToBase64String([Text.encoding]::UTF8.GetBytes("net user") | Out-file "mitre\defense-evasion\T1027_net_user_b64_$now.txt"
+[Convert]::ToBase64String([Text.encoding]::UTF8.GetBytes("net user")) | Out-file "mitre\defense-evasion\T1027_net_user_b64_$now.txt"
 
 ### T1564.003 Uses "-W Hidden" to set the "WindowStyle" parameter to hidden, concealing PowerShell windows.
 $now=getNow
