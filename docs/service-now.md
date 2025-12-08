@@ -9,6 +9,7 @@ Tips:
 - In Next Experience, classic list routes are often reachable via `/now/nav/ui/classic/params/target/<table>_list.do`.  
 - You can add filters with `?sysparm_query=...` or export flags like `?CSV` / `?EXCEL`.
 
+Export with: `Right click on row with column names`.
 ---
 
 ## Core system / security / logs
