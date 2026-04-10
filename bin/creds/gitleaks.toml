@@ -1,0 +1,17 @@
+[[rules]]
+    description = "Cisco LDAP Service Account Username"
+    id = "cisco-ldap-user"
+    regex = '''(?i)ldap-login-dn\s+([^\r\n]+)'''
+    keywords = ["ldap-login-dn"]
+
+[[rules]]
+    description = "Cisco LDAP Service Account Password"
+    id = "cisco-ldap-pass"
+    regex = '''(?i)ldap-login-password\s+([^\s]+)'''
+    keywords = ["ldap-login-password"]
+
+[[rules]]
+    description = "Cisco Generic Key"
+    id = "cisco-generic-key"
+    regex = '''(?i)key\s+([^\s]+)'''
+    keywords = ["key"]
