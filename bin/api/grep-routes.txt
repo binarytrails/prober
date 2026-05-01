@@ -1,0 +1,1 @@
+grep -oE "['\"]\/[a-zA-Z0-9/_:-]+['\"]" file.min.js
