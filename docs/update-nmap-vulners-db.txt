@@ -1,0 +1,12 @@
+# Step 1: Navigate to the vulners script directory and pull the latest updates
+cd /usr/share/nmap/scripts/nmap-vulners
+git pull
+
+# (Optional: If you need to install it fresh instead of updating)
+# git clone https://github.com/vulnersCom/nmap-vulners.git /usr/share/nmap/scripts/nmap-vulners
+
+# Step 2: Rebuild Nmap's local script database to index the update
+sudo nmap --script-updatedb
+
+# Step 3: Run a test scan using version detection (-sV)
+nmap -sV --script nmap-vulners <target-ip>
